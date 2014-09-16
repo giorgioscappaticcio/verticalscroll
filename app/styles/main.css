@@ -220,7 +220,7 @@
 	position: absolute;
 	top: 10%;
 	left: 50%;
-	margin-left: -38%;
+	margin-left: -35%;
 	text-align: center;
 }	
 	
@@ -245,7 +245,6 @@
 			font-size: 18px;
 			padding-left: 50px;
 			padding-right: 50px;
-			margin: 160px;
 			background-color: #eca961;
 		}
 			#screen-3 button:hover{
@@ -265,7 +264,7 @@
 	position: absolute;
 	top: 30%;
 	left: 50%;
-	margin-left: -38%;
+	margin-left: -35%;
 	text-align: center;
 }	
 	
@@ -442,6 +441,10 @@
 	#screen-2 .sub-title h2, 
 	#screen-3 .sub-title h2 {
 		margin-top: 0px;
+	}
+
+	#screen-3 button {
+		margin-top:	160px; 
 	}
 
 
