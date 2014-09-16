@@ -66,12 +66,12 @@
 	font-family: 'roadwayregular';
 }
 
-.fullscreen .sub-title{
+.fullscreen .sub-title h2{
 	font-family: 'keep_calmmedium';
 	color: #fff;
-	font-size: 18px;	
+	font-size: 20px;	
 }
-	#screen-2 .sub-title h2 > span {
+	.fullscreen .sub-title h2 > span {
 		font-size: 14px;
 	}
 
@@ -225,7 +225,7 @@
   ************************/
 
 /* Small screen ----------- */
-@media (min-width: 768px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
 /* Styles */
 	/*.store-banners {
 		width: 12%;
