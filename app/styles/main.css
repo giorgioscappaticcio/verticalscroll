@@ -304,6 +304,13 @@
   # SCREEN-5
   ************************/
 
+#screen-5 .sub-title{
+	width: 100%;
+	text-align: right;
+	padding-right: 30px;
+	padding-top: 30px;
+}
+
 #screen-5 .logo-cont {
 	position: absolute;
 	width: 90%;
