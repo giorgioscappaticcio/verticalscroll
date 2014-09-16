@@ -66,6 +66,16 @@
 	font-family: 'roadwayregular';
 }
 
+.fullscreen .sub-title{
+	font-family: 'keep_calmmedium';
+	color: #fff;
+	font-size: 18px;	
+}
+	#screen-2 .sub-title h2 > span {
+		font-size: 14px;
+	}
+
+
 .go-down {
 	position: absolute;
 	width: 50px;
@@ -88,6 +98,7 @@
 
 #screen-1 .main-title{
 	float: right;
+	text-align: right;
 }
 	#screen-1 .main-title h1{
 		color: #d6d5d2;
@@ -104,9 +115,6 @@
 	}
 
 	#screen-1 .sub-title h2 {
-		font-family: 'keep_calmmedium';
-		color: #fff;
-		font-size: 18px;
 		position: absolute;
 		bottom: 100px;
 		margin-left: 40px;
@@ -114,16 +122,14 @@
 	}
 
 	#screen-1 .sub-title h2 > span{
-		font-size: 14px;
 		color: #fff;
 		float: right;
 	}
 
 	.store-banners {
-		width: 12%;
-		position: absolute;
-		bottom: 180px;
-		right: 240px
+		max-width: 150px;
+		display: inline-block;
+		margin-right: 150px;
 	}
 
 		.store-banners img {
@@ -151,7 +157,7 @@
 	position: absolute;
 	top: 30%;
 	left: 50%;
-	margin-left: -35%;
+	margin-left: -38%;
 	text-align: center;
 }	
 	
@@ -160,6 +166,7 @@
 		font-size: 10em;
 		text-transform: uppercase;
 		line-height: 60px;
+		margin-bottom: 10px;
 	}
 
 		#screen-2 .main-title h1 > span{
@@ -174,6 +181,18 @@
 			color: #fff;
 			font-size: 18px;
 		}
+
+#screen-2 .sub-title h2 {
+	position: absolute;
+	top: 20px;
+	margin-left: 40px;
+	line-height: 30px;
+}
+
+	#screen-2 .sub-title h2 > span{
+		color: #fff;
+		float: right;
+	}
 
 
 
@@ -196,3 +215,40 @@
 	.navbar-brand img {
 		max-width: 208px;
 	}
+
+
+
+
+
+/************************
+  # MEDIA QUERIES
+  ************************/
+
+/* Small screen ----------- */
+@media (min-width: 768px)  {
+/* Styles */
+	/*.store-banners {
+		width: 12%;
+		position: absolute;
+		bottom: 90px;
+		right: 160px;
+	}*/
+
+	#screen-2 .main-title {
+		width: 85%;
+		margin-left: -42.5%;
+	}
+
+	#screen-2 .sub-title h2 {
+		margin-top: 0px;
+	}
+
+	.fullscreen .sub-title h2 {
+		font-size: 14px;
+	}
+
+	.fullscreen .sub-title h2 > span{
+		font-size: 12px;
+	}
+}
+
