@@ -406,7 +406,52 @@
 /************************
   # MEDIA QUERIES
   ************************/
+@media (max-width: 768px) { 
+	
+	#screen-1 .main-title {
+		 float: left; 
+		text-align: right;
+		width: 100%;
+	}
+	
+		#screen-1 .main-title h1 {
+			font-size: 3em;
+			text-align: center;
+			margin-right: 0px;
+			line-height: .6em;
+			margin-top: 0px;
+		}
 
+		#screen-1 .main-title h1 > span {
+			font-size: .4em;
+		}
+
+		#screen-1 .sub-title h2 {
+			bottom: 8em;
+			margin-left: 0px; 
+			line-height: 2em;
+			width: 100%;
+			text-align: center;
+			font-size: .7em;
+		}
+
+			.fullscreen .sub-title h2 > span {
+				font-size: 1em;
+				margin-right: 2em;
+			}
+
+		.store-banners {
+			max-width: 32%;
+			margin: 13em auto 0;
+			display: block;
+		}
+
+			.store-banners h2 {
+				font-size: 1.4em;
+				margin-top: 0px;
+			}
+
+ }
 /* Small screen ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1280px)  {
 /* Styles */
