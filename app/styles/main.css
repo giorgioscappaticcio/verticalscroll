@@ -427,7 +427,7 @@
 		}
 
 		#screen-1 .sub-title h2 {
-			bottom: 8em;
+			bottom: 16%;
 			margin-left: 0px; 
 			line-height: 2em;
 			width: 100%;
@@ -442,7 +442,7 @@
 
 		.store-banners {
 			max-width: 32%;
-			margin: 13em auto 0;
+			margin: 30% auto 0;
 			display: block;
 		}
 
