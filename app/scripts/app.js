@@ -31,4 +31,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }).value("duScrollGreedy", true);

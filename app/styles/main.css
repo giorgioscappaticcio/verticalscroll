@@ -352,6 +352,33 @@
 
 
 /************************
+  # SIDE BALL NAVIGATION
+  ************************/
+
+.side-ball {
+	width: 40px;
+	position: fixed;
+	top: 50%;
+	left: 0%;
+	z-index: 9;
+}
+	
+	.side-ball ul {
+		list-style: none;
+	}
+
+		.side-ball ul li a{
+			color: #DA9788;
+		}
+
+		.side-ball ul li a.active {
+			color: #c1092c;
+		}
+
+
+
+
+/************************
   # FOOTER
   ************************/
 
