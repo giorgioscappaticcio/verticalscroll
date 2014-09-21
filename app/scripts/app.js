@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var stopemotionApp = angular
   .module('stopemotionApp', [
     'ngAnimate',
     'ngCookies',
@@ -32,3 +32,4 @@ angular
         redirectTo: '/'
       });
   }).value("duScrollGreedy", true);
+

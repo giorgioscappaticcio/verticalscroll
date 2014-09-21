@@ -31,6 +31,7 @@
 
 
 
+
 /************************
   # FULL SCREEN
   ************************/
@@ -69,28 +70,50 @@
 .fullscreen .sub-title h2{
 	font-family: 'keep_calmmedium';
 	color: #fff;
-	font-size: 20px;	
+	font-size: 1.2em;	
 }
 	.fullscreen .sub-title h2 > span {
-		font-size: 14px;
+		font-size: 1em;
 	}
 
 
 .go-down {
 	position: absolute;
-	width: 50px;
+	bottom: 10px;
+	width: 100%;
 	height: 50px;
-	bottom: 40px;
 	color: #777;
-	left: 50%;
 	font-size: 32px;
 	text-align: center;
-	margin-left: -25px;
 	cursor: pointer;
 }
 	
 	.go-down:hover {
 		color: #fff;
+	}
+
+
+
+
+
+/************************
+  # NAV BAR
+  ************************/
+
+.navbar{
+	min-height: 94px;
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+.navbar-inverse {
+	background-color: rgba(0, 0, 0, 0.7);
+	border-color: transparent;
+	border-radius: 0px;
+}
+	
+	.navbar-brand img {
+		max-width: 208px;
 	}
 
 
@@ -104,6 +127,7 @@
 #screen-1 .main-title{
 	float: right;
 	text-align: right;
+	margin-top: 10%;
 }
 	#screen-1 .main-title h1{
 		color: #d6d5d2;
@@ -159,11 +183,9 @@
   ************************/
 
 #screen-2 .main-title{
-	width: 70%;
+	width: 100%;
 	position: absolute;
 	top: 30%;
-	left: 50%;
-	margin-left: -38%;
 	text-align: center;
 }	
 	
@@ -197,7 +219,7 @@
 
 #screen-2 .sub-title h2 {
 	position: absolute;
-	top: 20px;
+	top: 10%;
 	margin-left: 40px;
 	line-height: 30px;
 }
@@ -216,11 +238,9 @@
   ************************/
 
 #screen-3 .main-title{
-	width: 70%;
+	width: 100%;
 	position: absolute;
 	top: 10%;
-	left: 50%;
-	margin-left: -35%;
 	text-align: center;
 }	
 	
@@ -260,11 +280,9 @@
   ************************/
 
 #screen-4 .main-title{
-	width: 70%;
+	width: 100%;
 	position: absolute;
 	top: 30%;
-	left: 50%;
-	margin-left: -35%;
 	text-align: center;
 }	
 	
@@ -304,7 +322,9 @@
   ************************/
 
 #screen-5 .sub-title{
+	position: absolute;
 	width: 100%;
+	top: 10%;
 	text-align: right;
 	padding-right: 30px;
 	padding-top: 30px;
@@ -326,54 +346,6 @@
 	background-color: rgba(0,0,0,0.7);
 }
 
-
-/************************
-  # NAV BAR
-  ************************/
-
-.navbar{
-	min-height: 94px;
-	font-size: 18px;
-	font-weight: lighter;
-}
-
-.navbar-inverse {
-	background-color: rgba(0, 0, 0, 0.7);
-	border-color: transparent;
-	border-radius: 0px;
-}
-	
-	.navbar-brand img {
-		max-width: 208px;
-	}
-
-
-
-
-
-/************************
-  # SIDE BALL NAVIGATION
-  ************************/
-
-.side-ball {
-	width: 40px;
-	position: fixed;
-	top: 50%;
-	left: 0%;
-	z-index: 9;
-}
-	
-	.side-ball ul {
-		list-style: none;
-	}
-
-		.side-ball ul li a{
-			color: #DA9788;
-		}
-
-		.side-ball ul li a.active {
-			color: #c1092c;
-		}
 
 
 
@@ -430,19 +402,87 @@
 
 
 
+
+/************************
+  # SIDE BALL NAVIGATION
+  ************************/
+
+.side-ball {
+	width: 40px;
+	position: fixed;
+	top: 50%;
+	left: 0%;
+	z-index: 9;
+	font-size: 10px;
+}
+	
+	.side-ball ul {
+		list-style: none;
+	}
+
+		.side-ball ul li a{
+			color: #DA9788;
+		}
+
+		.side-ball ul li a.active {
+			color: #c1092c;
+		}
+
+
+
+
+
 /************************
   # MEDIA QUERIES
   ************************/
-@media (max-width: 768px) { 
+
+ /* Small screen max-width 640px ----------- */
+
+@media only screen and (max-width: 40em) { 
 	
+	body.mobile {
+		overflow-x: hidden !important; 
+	}
+
+	.navbar-brand img {
+		max-width: 158px;
+		padding-top: 10px
+	}
+
+	.fullscreen .main-title h1{
+		font-size: 3em !important;	
+	}
+
+	.fullscreen .main-title h1.mobile{
+		font-size: 5em !important;	
+	}
+
+		.fullscreen .main-title h1.mobile span{
+		font-size: .1em !important;
+		padding: 0 10px;	
+	}
+
+	.fullscreen .sub-title h2{
+		font-size: .7em;	
+	}
+
+	.fullscreen .sub-title h2 > span {
+		font-size: 1em;
+		margin-right: 2em;
+		float: none !important;
+	}
+
+
+	/* Screen - 1 */
+
 	#screen-1 .main-title {
 		 float: left; 
 		text-align: right;
 		width: 100%;
+		margin-top: 30%;
 	}
 	
 		#screen-1 .main-title h1 {
-			font-size: 3em;
 			text-align: center;
 			margin-right: 0px;
 			line-height: .6em;
@@ -454,71 +494,81 @@
 		}
 
 		#screen-1 .sub-title h2 {
-			bottom: 16%;
-			margin-left: 0px; 
+			bottom: 9%;
+			margin-left: 0px;
 			line-height: 2em;
 			width: 100%;
 			text-align: center;
-			font-size: .7em;
+			padding: 0px 70px;
 		}
 
-			.fullscreen .sub-title h2 > span {
-				font-size: 1em;
-				margin-right: 2em;
-			}
+	/* Store Banners */
 
-		.store-banners {
-			max-width: 32%;
-			margin: 30% auto 0;
-			display: block;
+	.store-banners {
+		max-width: 32%;
+		margin: 30% auto 0;
+		display: block;
+	}
+
+		.store-banners h2 {
+			font-size: 1.4em;
+			margin-top: 0px;
 		}
 
-			.store-banners h2 {
-				font-size: 1.4em;
-				margin-top: 0px;
-			}
+	/* Screen - 2 */
+
+	#screen-2 .sub-title h2 {
+		position: absolute;
+		top: 18%;
+		padding: 0 10px;
+		margin: 0;
+		line-height: 1.8em;
+		width: 50%;
+		text-align: left;
+	}
+
+	/* Screen - 3 */		
+
+	#screen-3 .main-title{
+		top: 15%;
+	}
+	
+		#screen-3 .main-title h1{
+			line-height: 30px;
+		}
+
+		#screen-3 .main-title button{
+			margin-top: 0px !important;
+		}
+
+	/* Screen - 5 */	
+
+	#screen-5 .sub-title{
+		position: absolute;
+		width: 100%:;
+		padding-right: 30px;
+		top: 12%;
+		padding-top: 30px;
+	}
+
+	#screen-5 .logo-cont {
+		top: 30%
+	}
+
+	/* Footer */
+	.footer .col-right {
+		display: none;
+	}
+
+
+
+
 
  }
-/* Small screen ----------- */
-@media only screen and (min-width: 768px) and (max-width: 1280px)  {
-/* Styles */
+/* Medium screen min-width 641px and max-width 1024px ----------- */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
 	
-	#screen-1 .store-banners {
-		max-width: 150px;
-		display: inline-block;
-		margin-right: 150px;
-		margin-top: 0px;
-	}
-
-	#screen-2 .main-title {
-		width: 85%;
-		margin-left: -42.5%;
-	}
-
-	#screen-3 .main-title {
-		width: 85%;
-		margin-left: -42.5%;
-	}
-
-	#screen-4 .main-title {
-		width: 85%;
-		margin-left: -42.5%;
-	}
-
-	#screen-4 .main-title h1 {
-		font-size: 8em;
-	}
-
-
-	#screen-2 .sub-title h2, 
-	#screen-3 .sub-title h2 {
-		margin-top: 0px;
-	}
-
-	#screen-3 button {
-		margin-top:	160px; 
-	}
-
+	/* Full Screen */
 
 	.fullscreen .sub-title h2 {
 		font-size: 14px;
@@ -527,5 +577,193 @@
 	.fullscreen .sub-title h2 > span{
 		font-size: 12px;
 	}
+
+	/* Screen - 1 */
+
+	#screen-1 .store-banners {
+		max-width: 150px;
+		display: inline-block;
+		margin-right: 150px;
+		margin-top: 0px;
+	}
+
+	/* Screen - 2 */
+
+	#screen-2 .sub-title h2{
+		top: 15%;
+		width: 50%;
+		line-height: 1.4em;
+	}
+
+	/* Screen - 3 */
+
+	#screen-3 .main-title h1 {
+		line-height: 30px;
+		margin-bottom: 0px;
+	}
+
+	#screen-3 .sub-title h2 {
+		margin-top: 0px;
+	}
+
+	#screen-3 button {
+		margin-top: 12%;
+	}
+
+	/* Screen - 4 */
+
+	#screen-4 .main-title h1 {
+		font-size: 6em;
+	}
+
+	/* Screen - 5 */	
+
+	#screen-5 .sub-title{
+		position: absolute;
+		width: 100%:;
+		padding-right: 30px;
+		top: 12%;
+		padding-top: 0px;
+	}
+
+	#screen-5 .logo-cont {
+		top: 28%
+	}
+
+ 	
+}
+
+/* Large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { 
+
+	/* Store Banners */
+
+	.store-banners {
+		display: block;
+		margin-right: 140px;
+		margin-top: 40px;
+		float: right;
+	}
+
+		.store-banners h2 {
+			font-size: 1.4em;
+			margin-top: 0px;
+		}
+
+	/* Screen - 4 */
+
+	#screen-4 .main-title h1 {
+		/*font-size: 8em;*/
+	}
+}
+
+
+
+
+
+/************************
+  # POP UP
+  ************************/
+
+.white-popup {
+  	position: absolute;
+	background: #000;
+	padding: 10px;
+	width: 100%;
+	top: 20%;
+	z-index: 1032; 
+}
+	.white-popup .close-popup {
+		display: inline-block;
+		float: right;
+		padding: 0px 0px 10px;
+		text-align: right;
+		color: white;
+		cursor: pointer;
+	}
+
+	.white-popup .videoContainer {
+		margin: 0 auto;
+	}
+
+	.white-popup iframe {
+		border: none;
+		width: 100%;
+		height: 100%;
+	}
+
+.overlay {
+  	position: fixed;
+	background: #000;
+	width: 100%;
+	height: 100%;
+	top: 0 ;
+	left: 0;
+	z-index: 1031;
+	opacity: 0.9; 
+}
+
+
+
+
+
+/************************
+  # NG_ANIMATE CSS
+  ************************/
+
+/* ANIMATIONS
+============================================================================= */
+
+/* leaving animations ----------------------------------------- */
+/* rotate and fall */
+@keyframes rotateFall {
+	0% 		{ transform: rotateZ(0deg); }
+	20% 	{ transform: rotateZ(10deg); animation-timing-function: ease-out; }
+	40% 	{ transform: rotateZ(17deg); }
+	60% 	{ transform: rotateZ(16deg); }
+	100% 	{ transform: translateY(100%) rotateZ(17deg); }
+}
+
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+	to 		{ transform: translateX(-100%); }
+}
+
+/* rotate out newspaper */
+@keyframes rotateOutNewspaper {
+	to 		{ transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+
+/* entering animations --------------------------------------- */
+/* scale up */
+@keyframes scaleUp {
+	from 	{ opacity: 0; }
+	to 	{ opacity: 1;  }
+}
+
+@keyframes scaleDown {
+	from 	{ opacity: 1;  }
+	to 	{ opacity: 0.3;  }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+	from 	{ transform:translateX(100%); }
+	to 		{ transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+	from 	{ transform:translateY(100%); }
+	to 		{ transform: translateY(0); }
+}
+
+
+.slide-animate-container .ng-enter { 
+	animation: scaleUp 0.2s both ease-in;
+}
+.slide-animate-container .ng-leave { 
+	animation: scaleDown 0.3s both ease-in;
 }
 
